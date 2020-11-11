@@ -1,0 +1,43 @@
+<div class="example-container mat-elevation-z8">
+  <h2>Administración Usuarios</h2>
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" (click)="adduser()">
+      <mat-icon>add</mat-icon> Adicionar Usuario
+    </a>
+  </div>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="data" class="example-table" matSort matSortActive="name" matSortDisableClear
+      matSortDirection="asc">
+
+      <!-- Nombre Column -->
+      <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let row">{{row.Nombre | titlecase}}</td>
+      </ng-container>
+
+      <!-- Apellido Column -->
+      <ng-container matColumnDef="Apellido">
+        <th mat-header-cell *matHeaderCellDef>Apellido</th>
+        <td mat-cell *matCellDef="let row">{{row.Apellido | titlecase }}</td>
+      </ng-container>
+
+      <!-- Documento Column -->
+      <ng-container matColumnDef="Documento">
+        <th mat-header-cell *matHeaderCellDef>Documento</th>
+        <td mat-cell *matCellDef="let row">{{row.Documento}}</td>
+      </ng-container>
+
+      <!-- Documento Column -->
+      <ng-container matColumnDef="Peso">
+        <th mat-header-cell *matHeaderCellDef>Peso</th>
+        <td mat-cell *matCellDef="let row">{{row.Peso}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/detailuser/', row.Documento]"></tr>
+    </table>
+  </div>
+</div>
