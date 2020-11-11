@@ -27,12 +27,6 @@ table {
   justify-content: center;
 }
 
-.example-rate-limit-reached {
-  color: #980000;
-  max-width: 360px;
-  text-align: center;
-}
-
 /* Column Widths */
 .mat-column-number,
 .mat-column-state {
@@ -45,4 +39,8 @@ table {
 
 .mat-flat-button {
   margin: 5px;
+}
+
+.example-table {
+  cursor: pointer;
 }

@@ -26,11 +26,11 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <mat-label>Peso</mat-label>
-        <input matInput placeholder="Peso" formControlName="Peso"
+        <mat-label>Peso (Kg)</mat-label>
+        <input matInput placeholder="Peso (Kg)" formControlName="Peso"
                 [errorStateMatcher]="matcher">
         <mat-error>
-          <span *ngIf="!form.get('Peso').valid && form.get('Peso').touched">Ingrese Peso</span>
+          <span *ngIf="!form.get('Peso').valid && form.get('Peso').touched">Ingrese Peso (Kg)</span>
         </mat-error>
       </mat-form-field>
       <div class="button-row">

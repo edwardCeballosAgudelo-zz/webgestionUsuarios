@@ -12,6 +12,7 @@ import { AdicionarUsuarioComponent } from './adicionar-usuario/adicionar-usuario
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
 import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
+import { PipesModule } from './core/pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usua
     MatButtonToggleModule,
     MatSelectModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
