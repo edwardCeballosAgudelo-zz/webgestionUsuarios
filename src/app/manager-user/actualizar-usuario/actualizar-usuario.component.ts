@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UsuarioServiceService } from '../services/usuario-service.service';
+import { UsuarioServiceService } from '../../services/usuario-service.service';
 import Swal from 'sweetalert2';
 
 @Component({

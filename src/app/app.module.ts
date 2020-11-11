@@ -3,26 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // tslint:disable-next-line: max-line-length
 import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatTableModule, MatIconModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatSliderModule, MatSlideToggleModule, MatButtonToggleModule, MatSelectModule, MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-import { AdicionarUsuarioComponent } from './adicionar-usuario/adicionar-usuario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
-import { ActualizarUsuarioComponent } from './actualizar-usuario/actualizar-usuario.component';
 import { PipesModule } from './core/pipes/pipes.module';
 import { MenuComponent } from './menu/menu.component';
+import { ManagerUserModule } from './manager-user/manager-user.module';
+import { ManagerUserComponent } from './manager-user/manager-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaUsuariosComponent,
-    AdicionarUsuarioComponent,
-    DetalleUsuarioComponent,
-    ActualizarUsuarioComponent,
-    MenuComponent
+    MenuComponent,
+    ManagerUserComponent
   ],
   imports: [
     FormsModule,
@@ -45,7 +40,8 @@ import { MenuComponent } from './menu/menu.component';
     BrowserAnimationsModule,
     HttpClientModule,
     PipesModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ManagerUserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
